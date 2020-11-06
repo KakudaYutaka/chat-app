@@ -1,53 +1,33 @@
-<div class="chat-header">
-  <div class="left-header">
-    <div class="header-title">
-      hogefuga
-    </div>
-  </div>
-  <div class="right-header">
-    <div class="header-button">
-      <a href="#">チャットを終了する</a>
-    </div>
-  </div>
-</div>
-
-<div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Tom
+<div class='chat-room-form'>
+  <h1>新規チャットルーム</h1>
+  <%=form_with model: @room, local: true do |f|%>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <%= f.label :チャットルーム名, class: 'chat-room-form__label'%>
       </div>
-      <div class="message-date">
-        2020/3/31(Wed) 12:43:30
+      <div class='chat-room-form__field--right'>
+        <%= f.text_field :name, class: 'chat__room_name chat-room-form__input', placeholder: 'チャットルーム名を入力してください'%>
       </div>
     </div>
-    <div class="lower-message">
-      <div class="message-content">
-        おはよう
+    <div class='chat-room-form__field'>
+    </div>
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'>
+        <label class='chat-room-form__label' for='chat_room_チャットメンバー'>チャットメンバー</label>
+      </div>
+      <div class='chat-room-form__field--right'>
+        <select>
+          <option>チャットするユーザーを選択してください</option>
+          <option>ユーザー1</option>
+          <option>ユーザー2</option>
+        </select>
       </div>
     </div>
-  </div>
-
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-        Tom
-      </div>
-      <div class="message-date">
-        2020/3/31(Wed) 12:47:30
+    <div class='chat-room-form__field'>
+      <div class='chat-room-form__field--left'></div>
+      <div class='chat-room-form__field--right'>
+        <%= f.submit class: 'chat-room-form__action-btn'%>
       </div>
     </div>
-    <div class="lower-message">
-      <div class="message-content">
-        こんばんは
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="form">
-  <div class="form-input">
-    <input class="form-message" placeholder= "type a message">
-  </div>
-  <input class="form-submit" type="submit" value="送信">
+  <% end %>
 </div>
