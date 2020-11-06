@@ -34,7 +34,7 @@
 }
 
 .rooms {
-  background-color: #2f3e51;
+  background-color: #2F3E51;
   height: calc(100vh - 100px);
   padding: 0 20px;
   overflow: scroll;
@@ -86,7 +86,7 @@
 }
 
 .message {
-  margin: 10px;
+  margin: 10px 0 0 0;
 }
 
 .upper-message {
@@ -107,6 +107,7 @@
 .lower-message {
   margin-top: 10px;
 }
+
 .message-content {
   color: #434a54;
   font-size: 14px;
